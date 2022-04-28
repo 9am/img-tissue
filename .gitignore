@@ -1,0 +1,15 @@
+# npm
+node_modules
+npm-debug.log*
+
+# testing
+coverage
+
+# production
+dist
+demo
+*.tar
+
+# misc
+.DS_Store
+*.swp

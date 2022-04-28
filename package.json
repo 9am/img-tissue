@@ -1,0 +1,39 @@
+{
+  "name": "@9am/img-tissue",
+  "version": "1.0.0",
+  "description": "A web component animates an image with a minimization effect.",
+  "keywords": [
+    "web component",
+    "img",
+    "svg"
+  ],
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/img-tissue.umd.js",
+  "module": "./dist/img-tissue.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/img-tissue.es.js",
+      "require": "./dist/img-tissue.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": [
+    {
+      "name": "9am",
+      "email": "tech.9am@gmail.com",
+      "url": "https://9am.github.io/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9am/img-tissue"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "vite": "^2.8.6"
+  }
+}

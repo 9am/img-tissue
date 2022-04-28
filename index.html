@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>img-tissue</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img-tissue {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img-tissue
+        src="/demo/img/lamp.webp"
+        column="8"
+        row="8"
+        title="lamp"
+    ></img-tissue>
+    <script type="module">
+        import { register } from '/lib/main.js';
+        register({});
+
+        let on = true;
+        const tissue = document.querySelector('img-tissue');
+        window.addEventListener('click', event => {
+            const fn = on ? tissue.zoomIn : tissue.zoomOut;
+            fn.call(tissue, {
+                clientX: event.clientX,
+                clientY: event.clientY,
+                duration: 300,
+            });
+            on = !on;
+        });
+    </script>
+</body>
+</html>
